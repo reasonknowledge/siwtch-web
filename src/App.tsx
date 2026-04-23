@@ -1,21 +1,37 @@
-import { Button } from "@/components/ui/button"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import Home from "./pages/home"
+import Services from "./pages/services"
+import ServiceDetail from "./pages/service-detail"
+import About from "./pages/about"
+import Support from "./pages/support"
+import ChoicePayement from "./pages/choice-payement"
+import MobilePayement from "./pages/mobile-payement"
+import MobileNav from "@/components/comons/mobile-nav"
+import Navbar from "@/components/comons/nav-bar"
+import { DynamicBreadcrumb } from "@/components/comons/dynamic-breadcrumb"
 
-export function App() {
+export default function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <BrowserRouter>
+      <div className="flex min-h-screen flex-col">
+        <MobileNav />
+        <Navbar />
+        <DynamicBreadcrumb />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:serviceName" element={<ServiceDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/paiement" element={<ChoicePayement />} />
+            <Route path="/choice-payement" element={<ChoicePayement />} />
+            <Route path="/mobile-payement" element={<MobilePayement />} />
+            <Route path="/assistance" element={<Assistance />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
       </div>
-    </div>
+    </BrowserRouter>
   )
 }
-
-export default App
