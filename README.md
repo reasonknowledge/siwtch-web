@@ -1,21 +1,116 @@
-# React + TypeScript + Vite + shadcn/ui
+# Siwtch Direct - Frontend
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Application web pour la simplification des démarches administratives en Côte d'Ivoire.
 
-## Adding components
+## Prérequis
 
-To add components to your app, run the following command:
+- [Node.js](https://nodejs.org/) (version 18 ou supérieure)
+- [npm](https://www.npmjs.com/) (inclus avec Node.js) ou [pnpm](https://pnpm.io/)
+- [Git](https://git-scm.com/)
+
+## Installation
+
+### 1. Cloner le projet
 
 ```bash
-npx shadcn@latest add button
+git clone https://github.com/reasonknowledge/siwtch-web.git
+cd siwtch-web
 ```
 
-This will place the ui components in the `src/components` directory.
+### 2. Installer les dépendances
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+npm install
 ```
+
+Ou avec pnpm :
+
+```bash
+pnpm install
+```
+
+### 3. Lancer le serveur de développement
+
+```bash
+npm run dev
+```
+
+L'application sera accessible à l'adresse : **http://localhost:5173**
+
+## Scripts disponibles
+
+| Commande          | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Lance le serveur de développement     |
+| `npm run build`   | Compile le projet pour la production  |
+| `npm run preview` | Prévisualise la version de production |
+| `npm run lint`    | Exécute le linter ESLint              |
+
+## Structure du projet
+
+```
+siwtch-web/
+├── src/
+│   ├── assets/          # Images et ressources statiques
+│   ├── components/      # Composants React
+│   │   ├── admins/      # Composants admin
+│   │   ├── comons/      # Composants partagés
+│   │   └── ui/          # Composants shadcn/ui
+│   ├── data/            # Données statiques
+│   ├── hooks/           # Hooks personnalisés
+│   ├── lib/             # Utilitaires
+│   ├── pages/           # Pages de l'application
+│   ├── store/           # Gestion d'état
+│   └── users/           # Composants utilisateur
+├── public/              # Fichiers publics
+├── index.html           # Point d'entrée HTML
+├── package.json         # Dépendances et scripts
+├── tailwind.config.js   # Configuration Tailwind CSS
+├── tsconfig.json        # Configuration TypeScript
+└── vite.config.ts       # Configuration Vite
+```
+
+## Technologies utilisées
+
+- **React 18** - Bibliothèque UI
+- **TypeScript** - Typage statique
+- **Vite** - Build tool et dev server
+- **Tailwind CSS** - Framework CSS utilitaire
+- **shadcn/ui** - Composants UI réutilisables
+- **React Router** - Navigation
+- **Lucide React** - Icônes
+
+## Pages principales
+
+| Page            | URL                      | Description                               |
+| --------------- | ------------------------ | ----------------------------------------- |
+| Accueil         | `/`                      | Landing page avec services et témoignages |
+| Services        | `/services`              | Liste des services disponibles            |
+| Service détail  | `/services/:serviceName` | Détails d'un service                      |
+| À propos        | `/about`                 | Informations sur la plateforme            |
+| Paiement        | `/choice-payement`       | Choix du mode de paiement                 |
+| Paiement Mobile | `/mobile-payement`       | Paiement via mobile money                 |
+| Assistance      | `/assistance`            | FAQ et contact                            |
+| Support         | `/support`               | Support utilisateur                       |
+
+## Déploiement
+
+Pour créer une version de production :
+
+```bash
+npm run build
+```
+
+Les fichiers compilés seront dans le dossier `dist/`.
+
+## Contribution
+
+1. Créer une branche : `git checkout -b ma-fonctionnalite`
+2. Faire les modifications
+3. Commiter : `git commit -m 'Ajout de ma fonctionnalite'`
+4. Pousser : `git push origin ma-fonctionnalite`
+5. Créer une Pull Request
+
+## Licence
+
+Propriétaire - Siwtch Direct
