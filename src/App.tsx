@@ -9,6 +9,7 @@ import MobilePayement from "./pages/mobile-payement"
 import MobileNav from "@/components/comons/mobile-nav"
 import Navbar from "@/components/comons/nav-bar"
 import { DynamicBreadcrumb } from "@/components/comons/dynamic-breadcrumb"
+import Assistance from "./pages/assistance"
 
 export default function App() {
   return (
