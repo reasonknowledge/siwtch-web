@@ -6,10 +6,10 @@ import About from "./pages/about"
 import Support from "./pages/support"
 import ChoicePayement from "./pages/choice-payement"
 import MobilePayement from "./pages/mobile-payement"
+import Assistance from "./pages/assistance"
 import MobileNav from "@/components/comons/mobile-nav"
 import Navbar from "@/components/comons/nav-bar"
 import { DynamicBreadcrumb } from "@/components/comons/dynamic-breadcrumb"
-import Assistance from "./pages/assistance"
 
 export default function App() {
   return (

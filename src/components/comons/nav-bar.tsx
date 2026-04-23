@@ -5,7 +5,7 @@ const menuItems = [
   { title: "Accueil", href: "/" },
   { title: "Services", href: "/services" },
   { title: "À propos", href: "/about" },
-  { title: "Assistance", href: "/support" },
+  { title: "Assistance", href: "/assistance" },
 ]
 
 export default function Navbar() {

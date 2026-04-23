@@ -14,7 +14,7 @@ const menuItems = [
   { title: "Accueil", icon: Home, href: "/" },
   { title: "Services", icon: Briefcase, href: "/services" },
   { title: "À propos", icon: Info, href: "/about" },
-  { title: "Assistance", icon: HelpCircle, href: "/support" },
+  { title: "Assistance", icon: HelpCircle, href: "/assistance" },
 ]
 
 export default function MobileNav() {
@@ -73,7 +73,7 @@ export default function MobileNav() {
               <Button variant="outline" className="w-full justify-center">
                 Connexion
               </Button>
-              <Button className="w-full justify-center bg-blue-400 border border-gray-300 hover:bg-blue-500">
+              <Button className="w-full justify-center border border-gray-300 bg-blue-400 hover:bg-blue-500">
                 S'inscrire
               </Button>
             </div>
