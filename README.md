@@ -5,7 +5,7 @@ Application web pour la simplification des démarches administratives en Côte d
 ## Prérequis
 
 - [Node.js](https://nodejs.org/) (version 18 ou supérieure)
-- [npm](https://www.npmjs.com/) (inclus avec Node.js) ou [pnpm](https://pnpm.io/)
+- [Bun](https://bun.sh/) (runtime et package manager)
 - [Git](https://git-scm.com/)
 
 ## Installation
@@ -20,19 +20,13 @@ cd siwtch-web
 ### 2. Installer les dépendances
 
 ```bash
-npm install
-```
-
-Ou avec pnpm :
-
-```bash
-pnpm install
+bun install
 ```
 
 ### 3. Lancer le serveur de développement
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 L'application sera accessible à l'adresse : **http://localhost:5173**
@@ -41,10 +35,10 @@ L'application sera accessible à l'adresse : **http://localhost:5173**
 
 | Commande          | Description                           |
 | ----------------- | ------------------------------------- |
-| `npm run dev`     | Lance le serveur de développement     |
-| `npm run build`   | Compile le projet pour la production  |
-| `npm run preview` | Prévisualise la version de production |
-| `npm run lint`    | Exécute le linter ESLint              |
+| `bun run dev`     | Lance le serveur de développement     |
+| `bun run build`   | Compile le projet pour la production  |
+| `bun run preview` | Prévisualise la version de production |
+| `bun run lint`    | Exécute le linter ESLint              |
 
 ## Structure du projet
 
@@ -98,7 +92,7 @@ siwtch-web/
 Pour créer une version de production :
 
 ```bash
-npm run build
+bun run build
 ```
 
 Les fichiers compilés seront dans le dossier `dist/`.
