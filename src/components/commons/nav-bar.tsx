@@ -31,9 +31,11 @@ export default function Navbar() {
           </li>
         ))}
         <li>
-          <Button className="border-green-300 bg-white text-black hover:bg-green-50">
-            Connexion
-          </Button>
+          <Link to="/Signin">
+            <Button className="border-green-300 bg-white text-black hover:bg-green-50">
+              Connexion
+            </Button>
+          </Link>
         </li>
         <li>
           <Button className="bg-blue-400 text-white hover:bg-blue-500">

@@ -5,7 +5,7 @@ import { PersonalDataUpdateForm } from "@/users/personal-data-update-form"
 import { serviceData } from "@/data/data-services"
 import { getCurrentUser, type Certificate } from "@/data/data-users"
 import { CertificateCollapse } from "@/components/ui/certificate-collapse"
-import { DownloadModal } from "@/components/comons/download-modal"
+import { DownloadModal } from "@/components/commons/download-modal"
 import { certificateLabels } from "@/data/data-users"
 
 export default function ServiceDetail() {

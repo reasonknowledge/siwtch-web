@@ -48,7 +48,7 @@ siwtch-web/
 │   ├── assets/          # Images et ressources statiques
 │   ├── components/      # Composants React
 │   │   ├── admins/      # Composants admin
-│   │   ├── comons/      # Composants partagés
+│   │   ├── commons/      # Composants partagés
 │   │   └── ui/          # Composants shadcn/ui
 │   ├── data/            # Données statiques
 │   ├── hooks/           # Hooks personnalisés

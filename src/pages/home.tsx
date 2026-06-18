@@ -1,7 +1,7 @@
-import HeroSection from "@/components/comons/hero-section"
-import NosServices from "@/components/comons/nos-services"
-import Testimonies from "@/components/comons/testimonies"
-import Avantages from "@/components/comons/avantages"
+import HeroSection from "@/components/commons/hero-section"
+import NosServices from "@/components/commons/nos-services"
+import Testimonies from "@/components/commons/testimonies"
+import Avantages from "@/components/commons/avantages"
 
 export default function Home() {
   return (

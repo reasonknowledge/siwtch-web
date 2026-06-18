@@ -1,4 +1,4 @@
-import Demand from "@/components/comons/demand"
+import Demand from "@/components/commons/demand"
 import { Datademands } from "../data/data-demands"
 
 export default function Demands() {
