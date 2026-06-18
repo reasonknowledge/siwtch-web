@@ -102,7 +102,7 @@ export default function Assistance() {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <Button className="bg-green-600 text-white hover:bg-green-700">
+            <Button className="bg-green-600 text-white hover:bg-green-700 w-full">
               Rechercher
             </Button>
           </div>

@@ -1,3 +1,7 @@
+
+
+
+
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -9,6 +13,7 @@ import {
 } from "@/components/ui/sheet"
 import { Home, Briefcase, Info, HelpCircle, Menu, X } from "lucide-react"
 import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 
 const menuItems = [
   { title: "Accueil", icon: Home, href: "/" },
@@ -19,19 +24,30 @@ const menuItems = [
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    setOpen(false)
+    navigate("/signin")
+  }
+
+  const handleSignup = () => {
+    setOpen(false)
+    navigate("/signup")
+  }
 
   return (
     <div className="sticky top-0 z-50 md:hidden">
       {/* Header mobile avec bouton menu */}
       <div className="flex w-full items-center justify-between border-b border-gray-300 bg-white p-3">
-        <div>
+        <Link to="/">
           <h1 className="flex rounded-xl bg-green-700 px-2 py-1 text-center text-sm font-bold text-yellow-400">
             Siwtch Direct
           </h1>
-        </div>
+        </Link>
 
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger>
+          <SheetTrigger asChild>
             <Button
               variant="outline"
               size="icon"
@@ -42,7 +58,7 @@ export default function MobileNav() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent side="right" className="w-72 bg-white p-0">
+          <SheetContent side="right" className="flex w-72 flex-col bg-white p-0">
             <SheetHeader className="border-b border-gray-300 p-4">
               <SheetTitle className="text-lg font-semibold">Menu</SheetTitle>
               <SheetDescription className="sr-only">
@@ -51,29 +67,36 @@ export default function MobileNav() {
             </SheetHeader>
 
             {/* Navigation links */}
-            <nav className="flex flex-col gap-1 p-4">
+            <nav className="flex flex-1 flex-col gap-1 p-4">
               <p className="mb-2 text-xs font-medium text-gray-500">
                 Navigation
               </p>
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.title}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 hover:text-black"
                 >
                   <item.icon className="h-5 w-5" />
                   <span>{item.title}</span>
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* Footer buttons */}
             <div className="mt-auto flex flex-col gap-2 border-t border-gray-300 p-4">
-              <Button variant="outline" className="w-full justify-center">
+              <Button
+                onClick={handleLogin}
+                variant="outline"
+                className="w-full justify-center"
+              >
                 Connexion
               </Button>
-              <Button className="w-full justify-center border border-gray-300 bg-blue-400 hover:bg-blue-500">
+              <Button
+                onClick={handleSignup}
+                className="w-full justify-center border border-gray-300 bg-blue-400 hover:bg-blue-500"
+              >
                 S'inscrire
               </Button>
             </div>
