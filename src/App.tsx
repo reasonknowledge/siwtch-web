@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom"
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom"
 import Home from "./pages/home"
 import Services from "./pages/services"
 import ServiceDetail from "./pages/service-detail"
@@ -12,6 +18,7 @@ import Navbar from "./components/commons/nav-bar"
 import { DynamicBreadcrumb } from "./components/commons/dynamic-breadcrumb"
 import Footer from "./components/commons/footer"
 import Signin from "./components/commons/signin-user"
+import Signup from "./components/commons/signup"
 
 const authRoutes = ["/signin", "/signup"]
 
@@ -40,6 +47,7 @@ function AppLayout() {
           <Route path="/mobile-payement" element={<MobilePayement />} />
           <Route path="/assistance" element={<Assistance />} />
           <Route path="/Signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
@@ -55,4 +63,3 @@ export default function App() {
     </BrowserRouter>
   )
 }
-

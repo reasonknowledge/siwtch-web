@@ -38,9 +38,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Button className="bg-blue-400 text-white hover:bg-blue-500">
-            S'inscrire
-          </Button>
+          <Link to="/signup">
+            <Button className="bg-blue-400 text-white hover:bg-blue-500">
+              S'inscrire
+            </Button>
+          </Link>
         </li>
       </ul>
     </div>

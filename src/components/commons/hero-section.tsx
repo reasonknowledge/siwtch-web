@@ -16,7 +16,7 @@ export default function HeroSection() {
             placeholder="Recherchez un service..."
             className="w-full max-w-sm bg-white"
           />
-          <Button className="bg-blue-500 text-white hover:bg-blue-600">
+          <Button className="bg-blue-500 border-none text-white hover:bg-blue-600">
             Rechercher
           </Button>
         </div>

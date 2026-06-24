@@ -47,7 +47,7 @@ export default function MobileNav() {
         </Link>
 
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild>
+          <SheetTrigger>
             <Button
               variant="outline"
               size="icon"
