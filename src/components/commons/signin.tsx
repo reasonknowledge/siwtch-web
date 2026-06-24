@@ -29,7 +29,7 @@ export default function Signin() {
           <div className="space-y-3">
             <Button
               type="submit"
-              className="w-full border-none bg-yellow-600 text-white hover:bg-yellow-800"
+              className="w-full border-none bg-blue-600 text-white hover:bg-yellow-800"
             >
               Se connecter
             </Button>

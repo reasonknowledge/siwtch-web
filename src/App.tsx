@@ -17,7 +17,7 @@ import MobileNav from "./components/commons/mobile-nav"
 import Navbar from "./components/commons/nav-bar"
 import { DynamicBreadcrumb } from "./components/commons/dynamic-breadcrumb"
 import Footer from "./components/commons/footer"
-import Signin from "./components/commons/signin-user"
+import Signin from "./components/commons/signin"
 import Signup from "./components/commons/signup"
 
 const authRoutes = ["/signin", "/signup"]
